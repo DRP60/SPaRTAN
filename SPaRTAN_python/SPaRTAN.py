@@ -1,4 +1,3 @@
-        
 import numpy as np
 import cythkrnPlus
 import cythLeastR
@@ -154,5 +153,3 @@ class SPaRTAN:
         if P == None:
             P = self.P_train
         return self.W @ P.T	
-
-
