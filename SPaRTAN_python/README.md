@@ -3,11 +3,19 @@
 ### Introduction
 This is the Python/Cython implementation of the SPaRTAN. In order to improve the running time performance, we convert some computationally intensive python modules into Cython modules.  All functionalities are integrated into the class SPaRTAN . Please check SPaRTAN_demo.py file for the basic use of this class. This tutorial focuses on how to apply SPaRTAN in a real project situation.
 
-### Prerequisites
-The code runs on Python 3.2 and later,	and Cython 0.21 and later
+### Prerequisites and installation
+The package is written in python 3 and Cython.  SPaRTAN used the following dependencies as well: pandas, numpy, scipy, sklearn, matplotlib. 
 
-The following additional packages are used:
-pandas, numpy, sklearn, scipy, matplotlib, pathlib
+You can install Cython and those dependencies by the following commands:
+```sh
+pip install Cython
+pip install pandas
+pip install numpy
+pip install scipy
+pip install -U scikit-learn
+pip install matplotlib
+```
+Cython requires a C compiler to be present on the system. Please see [Installing Cython](https://cython.readthedocs.io/en/latest/src/quickstart/install.html) for a complete guide.
 
 ### Cython extension built
 There are two Cython extension modules needed for running SPARTAN. We have built the extensions under Windows(.pyx files) and Linux/Mac (.so files) system. You can download ones based on your operating system. If they are not compatible with your platform, then you need to build Cython extension on site. The followings are the instruction on how to build the Cython extension
