@@ -12,14 +12,14 @@ cpdef tuple LeastR(double[:,:] _A, double[:,:] _y, double z, dict opts):
     cdef np.ndarray x, funVal, ValueL
     cdef np.ndarray ind
     cdef np.ndarray mu, nu
-    cdef long m, n
+    cdef int m, n
     cdef double q
     cdef double lamda
     cdef long i, j
     
 
-    m = A.shape[0]
-    n = A.shape[1]
+    m = int(A.shape[0])
+    n = int(A.shape[1])
  
     if y.size != m:
         raise ValueError('Check the length of y!')
@@ -511,4 +511,3 @@ cpdef tuple LeastR(double[:,:] _A, double[:,:] _y, double z, dict opts):
         raise ValueError('The function does not support opts.mFlag=0 & opts.lFlag=1!')
 
     return (np.asarray(x), np.asarray(funVal))
-
