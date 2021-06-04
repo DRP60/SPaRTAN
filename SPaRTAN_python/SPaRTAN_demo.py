@@ -1,4 +1,3 @@
-import pathlib
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -8,7 +7,7 @@ from scipy.io import loadmat
 
 
 # load the data
-# path = pathlib.Path(__file__).parent.absolute()
+
 dataset = loadmat("../data/pbmc5kdc.mat")
 
 D = dataset["D"]
