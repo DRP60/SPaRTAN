@@ -1,20 +1,13 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb  4 19:44:57 2020
-
-@author: XIM33
-"""
-# cython: infer_types=True 
 import cython
-cimport scipy.linalg.cython_blas as blas
 import numpy as np
+cimport scipy.linalg.cython_blas as blas
 
 
 def kron(double[:, ::1] a, double[:, ::1] b):
-    cdef int i = a.shape[0]
-    cdef int j = a.shape[1]
-    cdef int k = b.shape[0]
-    cdef int l = b.shape[1]
+    cdef int i = int(a.shape[0])
+    cdef int j = int(a.shape[1])
+    cdef int k = int(b.shape[0])
+    cdef int l = int(b.shape[1])
     cdef int onei = 1
     cdef double oned = 1
     cdef int m, n
@@ -28,9 +21,9 @@ def kron(double[:, ::1] a, double[:, ::1] b):
 
 def removeDiagC(double[:, ::1] L, double[::1] Yv, int[::1] diag):
     cdef:
-        int Yrows = L.shape[0]
-        int Ycols = L.shape[1]
-        int Yaxis = diag.shape[0]
+        int Yrows = int(L.shape[0])
+        int Ycols = int(L.shape[1])
+        int Yaxis = int(diag.shape[0])
         int i, j, moveStart, moveEnd
 
     for i in range(1,Yaxis):
