@@ -2,13 +2,13 @@ import numpy.matlib as np
 cimport numpy as np
 from libc.math cimport floor
 
-cdef extern from "eppMatrix.h":
-    void _eppMatrix(double *X, double * V, int k, int n, double rho, double p)
+#cdef extern from "eppMatrix.h":
+#    void _eppMatrix(double *X, double * V, int k, int n, double rho, double p)
 
-cdef np.ndarray eppMatrix(double[:, :] v, int k, int n, double rho, double p):
-    cdef double[:, :] x = np.zeros((n, k), dtype=np.double)
-    _eppMatrix(&x[0,0], &v[0,0], k, n, rho, p)
-    return np.asmatrix(x).T
+#cdef np.ndarray eppMatrix(double[:, :] v, int k, int n, double rho, double p):
+#    cdef double[:, :] x = np.zeros((n, k), dtype=np.double)
+#    _eppMatrix(&x[0,0], &v[0,0], k, n, rho, p)
+#    return np.asmatrix(x).T
 
 cdef extern from "ep21R.h":
     void _ep21R(double * x, double *t, double * u, double * v, int n, int k)
