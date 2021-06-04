@@ -17,7 +17,7 @@ pip install matplotlib
 ```
 Cython requires a C compiler to be present on the system. Please see [Installing Cython](https://cython.readthedocs.io/en/latest/src/quickstart/install.html) for a complete guide.
 
-Our codes have been tested on Linux, Mac, and Windows systems. Please see Prerequisites.txt for each version of packages we tested on every operating system.
+Our codes have been tested on Linux, Mac, and Windows systems. Please see Prerequisites.xlsx for each version of packages we tested on every operating system.
 
 ### Cython extension built
 There are two Cython extension modules needed for running SPARTAN. We have built the extensions under Windows(.pyx files) and Linux/Mac (.so files) system. You can download ones based on your operating system. If they are not compatible with your platform, then you need to build Cython extension on site. The followings are the instruction on how to build the Cython extension
