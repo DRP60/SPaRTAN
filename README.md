@@ -1,5 +1,5 @@
 # SPaRTAN
-Signal-regulated transcription factors (TFs) underlie key developmental or differentiation transitions and activation states of cells (e.g., within the immune system). To date, single-cell genomics datasets have not been used to link cell-surface receptors to TFs of individual cells. To address this need, we developed a machine learning approach called **SPaRTAN (Single-cell Proteomic and RNA based Transcription factor Activity Network)** that integrates parallel surface protein measurements with mRNA expression data in cells based on CITE-seq (cellular indexing of transcriptomes and epitopes by sequencing) data with regulatory genomics resources. 
+The developmental pathways and functions of specialized cell types are dependent on the complex interplay between signaling and transcriptional networks. We present SPaRTAN (Single-cell Proteomic and RNA based Transcription factor Activity Network), a computational method to link cell-surface receptors to transcription factors (TFs) by exploiting Cellular Indexing of Transcriptomes and Epitopes by Sequencing (CITE-seq) datasets with cis-regulatory information. SPaRTAN is applied to peripheral blood mononuclear cells (PBMCs) to predict the coupling of signaling receptors with cell context-specific TF activities. The predictions are validated by flow cytometry analyses. SPaRTAN is then used to analyze the signaling coupled TF activity states of tumor infiltrating CD8+ T cells in malignant peritoneal and pleural mesotheliomas. SPaRTAN greatly enhances the utility of CITE-seq datasets to probe signaling coupled TF networks that regulate developmental or functional transitions in cellular states.
 
 ![Diagram](https://github.com/DRP60/SPaRTAN/blob/main/data/diagram.png)
 
@@ -7,6 +7,5 @@ Briefly, our model views expression of surface proteins as a proxy of their acti
 
 Since the model captures statistical relationships between surface proteins, TFs, and gene expression. We can use the trained interaction matrix to obtain different views of a CITE-seq data set; e.g., to predict TF activity from a cell's surface protein expression profile or to predict surface protein expression from a cell’s gene expression profile.  Intuitively, information flows down from observed surface protein levels through the learned interaction matrix to infer TF activities and observed mRNA expression levels or propagates up through the TF target-gene edges and interaction network to infer surface protein expression. 
 
-There are currently implementations of SPaRTAN in Matlab, and in Python. For more details and installation instructions on running SPaRTAN, please see the tutorials
+There is currently an implementation in Python. For more details and installation instructions on running SPaRTAN, please see the tutorial:
 * [Run SPaRTAN in Python](https://github.com/osmanbeyoglulab/SPaTRAN2/tree/main/SPaRTAN_python)
-* Run SPaRTAN in Matlab
