@@ -6,13 +6,13 @@ This is the Python/Cython implementation of the SPaRTAN. In order to improve the
 ## System Requirements
 SPaRTAN relies on the following dependencies:
 ```sh
-    python (>= 3.7.0)
-    Cython (>= 0.28.5)
-    pandas (>= 1.0.0)
-    numpy (>= 1.15.4)
-    scikit-learn (>= 0.19.2)
-    scipy (>= 1.1.0)
-    matplotlib (>= 2.2.3)
+python (>= 3.7.0)
+Cython (>= 0.28.5)
+pandas (>= 1.0.0)
+numpy (>= 1.15.4)
+scikit-learn (>= 0.19.2)
+scipy (>= 1.1.0)
+matplotlib (>= 2.2.3)
 ```
 Cython requires a C compiler to be present on the system (i.e. Visual Studios). Please see [Installing Cython](https://cython.readthedocs.io/en/latest/src/quickstart/install.html) for a complete guide.
 
@@ -74,6 +74,6 @@ spectrumBs = [0.5, 0.6, 0.7 ]
 
 All outputs should be found in the specified output folder. If no output folder is specified, the data should be found in data/outputs. Three files should be found there:
 
-projD.csv - a comma deliminated file containing a transcription factor by cell matrix
-projY.csv - a comma deliminated file containing a cell by surface-protein matrix
+projD.csv - a comma deliminated file containing a transcription factor by cell matrix\
+projY.csv - a comma deliminated file containing a cell by surface-protein matrix\
 W.csv - a comma deliminated file containing a transcription factor by surface-protein matrix
