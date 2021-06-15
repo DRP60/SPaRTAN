@@ -26,7 +26,7 @@ parser.add_argument("--rsL2", help="", type=float, default=0.001)
 parser.add_argument("--normalization", help="type of normalizion, no normalization if empty", type=str, default="l2")
 parser.add_argument("--input_dir", help="directory of input files", type=str, default="../data/inputs")
 parser.add_argument("--output_dir", help="directory of output files", type=str, default="../data/outputs")
-parser.add_argument('--fold', help="how many folds for the cross_validation.No cross_validation and using default/specified parameters if set to 0. u", type=int, default=2)
+parser.add_argument('--fold', help="how many folds for the cross_validation.No cross_validation and using default/specified parameters if set to 0", type=int, default=0)
 
 args = parser.parse_args()
 
