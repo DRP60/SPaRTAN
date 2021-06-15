@@ -43,7 +43,7 @@ python SPaRTAN_run.py --dataset_D name_of_dataset_D --dataset_P name_of_dataset_
 ```
 **Train the model with cross-validation**
 
-Along with our file specifications when running SPaRTAN_run.py, we can also specify the training parameters for SPaRTAN. Below are the default values for the program. However, SpectrumA, SpectrumB, Lamda, and rsL2 can be any float value. Normalization can be 'l1', 'l2', or 'max'. Fold can be any integer. This is only useful if fold = 0, otherwise cross-validation will take place. 
+Along with our file specifications when running SPaRTAN_run.py, we can also specify the training parameters for SPaRTAN. Below are the default values for the program. However, spectrumA, spectrumB, lamda, and rsL2 can be any float value. Normalization can be 'l1', 'l2', or 'max'. Fold can be any integer. This is only useful if fold = 0, otherwise cross-validation will take place. 
 
 ```sh
  python SPaRTAN_run.py --spectrumA 1.0 --spectrumB 0.7 --lamda 0.001 --rsL2 0.001 --normalization l2 --fold 2
